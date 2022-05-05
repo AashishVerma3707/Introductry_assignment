@@ -34,7 +34,7 @@ def split_into_sentences(text):
 text_list = split_into_sentences(string)
 
 
-# First task
+# First task (without using nltk library)
 def find(word):
     word = " " + word + " "
     print(string.count(word))
