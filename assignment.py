@@ -87,7 +87,7 @@ def get_conversation(text):
             break
 
 
-# Third task
+# Third task (with the help of nltk library)
 def Get_ProperNoun(text):
     print('PROPER NOUNS EXTRACTED :')
 
