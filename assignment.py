@@ -115,7 +115,7 @@ def Get_ProperNoun(text):
 
 Here we used various Pythons NLTK library imports to extract information from the text.
 
-Logic:
+Logic for third task:
     1: we split the paragraph into list of sentences.
     2: then collected all the stopwords as a list from the text given.
     3: Here for every sentence in the list ‘sentences’ we are splitting the sentences into list of words.
