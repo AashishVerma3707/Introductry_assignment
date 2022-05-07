@@ -32,12 +32,12 @@ def split_into_sentences(text):
 
 
 text_list = split_into_sentences(string)
-
+print(text_list)
 
 # First task
 def find(word):
     Count=0
-    words =[f" {word} ",f"\"{word}",f"{word}\"",f"{word},\"",f"{word}!\"",f"{word}?\"",f"\"{word}\""]
+    words =[f"{word} ",f" {word}",f" {word} ",f"\"{word} ",f"{word}\"",f"{word},",f"{word}!",f"{word}?",f"\"{word}\""]
     for i in words:
         Count+=string.count(i)
 
@@ -61,7 +61,8 @@ def find(word):
                         conversation += conversation_instance
                         conversation_count+=conversation_instance.count(j)
 
-                elif i.count(quot) == 2:
+                elif i.count(quot) >1:
+                    print(i)
                     index1 = i.index(quot)
                     index2 = i.index(quot, index1 + 1)
                     word_index = i.index(word[0])
@@ -70,6 +71,7 @@ def find(word):
                         conversation_instance = i[index1:index2 + 1]
                         conversation += conversation_instance
                         conversation_count+=conversation_instance.count(j)
+                        break
     if Count == 0:
         return f"Number of times it occured : {Count}"
 
